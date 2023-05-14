@@ -1,0 +1,131 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Train Booking</title>
+
+<style>
+
+.container{
+  margin-top: 50px;
+}
+#tabledata{
+  border: 2px solid black;
+  padding: 20px;
+  border-spacing : 20px; 
+  font-size: 20px;
+
+}
+
+#passenger-details-table{
+  border: 2px solid black;
+  padding: 20px;
+  border-spacing : 20px; 
+  font-size: 20px;
+
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+
+<h2 style="text-align:center"><b>Train Booking</b></h2>
+
+<form id="form_data" method="get">
+  <table id="tabledata" align="center">
+    <tr> 
+      <td> Journey From: 
+        <select name="fromstation" id="from" style="margin-left:30px">
+          <option value="visakhapatnam">Visakhapatnam</option>
+          <option value="hyderabad">Hyderabad</option>
+          <option value="chennai">Chennai</option>
+          <option value="palasa">Palasa</option>
+        </select>
+      </td> 
+      <td> Journey To: 
+        <select name="tostation" id="to" style="margin-left:30px">
+          <option value="visakhapatnam">Visakhapatnam</option>
+          <option value="hyderabad">Hyderabad</option>
+          <option value="chennai">Chennai</option>
+          <option value="palasa">Palasa</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td> Select a train: 
+        <select name="trainslist" id="trains" style="margin-left:30px">
+          <option value="godavari-express">101 - Godavari Express</option>
+          <option value="other-train">102 - Other Train</option>
+          <option value="another-train">103 - Another Train</option>
+          <option value="last-train">104 - Last Train</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+
+  <br>
+  <br>
+
+  <table id="passenger-details-table" align="center">
+    <tr>
+      <td>
+        <label><b>Passenger Details-1</b></label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" name="p1_name" placeholder="Enter full name" style="margin-left:25px">
+        <input type="number" name="p1_age" placeholder="Enter age of the passenger" style="margin-left:25px">
+        <label><b>Gender</b></label>
+        <input type="radio" name="p1_sex" value="Male" id="gender-1" style="margin-left:25px">
+        <label for="gender-1">Male</label>
+        <input type="radio" name="p1_sex" value="Female" id="gender-2" style="margin-left:25px">
+        <label for="gender-2">Female</label>
+        <input type="radio" name="p1_sex" value="Other" id="gender-3" style="margin-left:25px">
+        <label for="gender-3">Other</label>
+      </td>
+    </tr>
+  -->
+
+  <!DOCTYPE html>
+<html>
+<head>
+   <style>
+   	input{
+   	    margin: 8px;
+   	}
+   </style>
+</head>
+<body>
+	<h2>Add input on button click:</h2>
+	name : <input type="text" name="name" placeholder="type something"/>
+	<div id='input-cont'>
+        <!--Input container-->
+    </div>
+    <button onclick='addInput()'>+Add input</button>
+    
+    <script>
+        const container = document.getElementById('input-cont');
+        const genderLabel = document.createElement('label');
+        genderLabel.innerHTML = '<b>Gender</b>';
+        // Call addInput() function on button click
+        function addInput(){
+            let input = document.createElement('input');
+            input.placeholder = 'Type something';
+            container.appendChild(input);
+        }
+    </script>
+</body>
+</html>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

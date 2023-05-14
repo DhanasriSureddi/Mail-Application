@@ -1,0 +1,91 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style>
+
+.container{
+margin-top: 50px;
+}
+#tabledata{
+border:  2px solid black;
+padding: 20px;
+border-spacing : 20px; 
+font-size: 20px;
+
+}
+
+</style>
+
+
+ 
+</head>
+<body>
+
+
+
+
+<div class= "container" >
+
+<h2  style="text-align:center"><b>Mail Data</b></h2>
+
+<form id="form_data"  action = "MailServlet" method="get">
+  <table id="tabledata" align="center">
+
+
+<tr> 
+   <td>  ID : <input type = "text" name  = "id" id="id" placeholder ="Enter your ID" style = "margin-left:65px" required/> </td> 
+   </tr>
+ 
+    
+    <tr> 
+   <td>  Name : <input type = "text" name  = "username" id="name"  placeholder ="Enter your name" style = "margin-left:40px"required/> </td> 
+   </tr>
+
+  <tr> 
+   <td>  Mail : <input type = "Mail" name  = "mailid" id="mail" placeholder ="Enter your Mail" style = "margin-left:50px"required/> </td> 
+   </tr>
+   
+   
+   <tr> 
+   <td>  Mobile No : <input type = "text" name  = "phoneno" id="mobile" placeholder ="Enter your Mobile Number" required/> </td> 
+   </tr>
+  
+  <tr> 
+   <td>  DOB : <input type = "date" name  = "dob" placeholder ="Enter your DOB" id="dob" style = "margin-left:45px" required/> </td> 
+   </tr>
+   
+   <tr>
+   </tr>
+   <tr>
+   <td> <input type = "Submit" value =" Submit" style="height:30px;width:100px"/> </td>
+    <td> <input type = "reset" value ="Reset" style="height:30px;width:100px"/> </td>
+    </tr>
+  </table> 
+</form>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

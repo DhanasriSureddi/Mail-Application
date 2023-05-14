@@ -1,0 +1,118 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style>
+
+.container{
+margin-top: 50px;
+}
+#tabledata{
+border:  2px solid black;
+padding: 20px;
+border-spacing : 20px; 
+font-size: 20px;
+
+}
+input{
+ height:30px;
+ width:500px;
+ 
+}
+</style>
+
+</head>
+<body>
+
+
+
+
+<div class= "container" >
+
+<h2  style="text-align:center"><b> Send Email</b></h2>
+
+<form id="form_data"  action = "SendMailServlet2" method="post">
+  <table id="tabledata" align="center">
+
+
+  <tr> 
+    <td> To :  <select name="mail" id="gmail" style = "width : 500px;margin-left:97px" multiple >
+    <option value=" ">Select an option</option>
+</select>
+
+<script>
+    // Send an AJAX request to the servlet to retrieve the items
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // Populate the drop-down list with the items
+            var items = JSON.parse(this.responseText);
+            
+            var select = document.getElementById("gmail");
+            for (var i = 0; i < items.length; i++) {
+                var option = document.createElement("option");
+                option.text = items[i];
+                select.add(option);
+                console.log("Added option " + items[i]);
+            }
+        } else if (this.readyState == 4) {
+            console.log("Error loading items: " + this.status);
+        }
+    };
+    xmlhttp.open("GET", "MailListServlet", true);
+    xmlhttp.setRequestHeader("Content-type", "application/json");
+    xmlhttp.send();
+</script>
+    
+    
+ 
+    
+    <tr> 
+   <td>  Subject : <input type = "text" name  = "subject"  placeholder ="Enter subject" style = "margin-left:57px"required/> </td> 
+   
+   </tr>
+   <tr>
+   <td>  Schedule Date: <input type = "date" name  = "date" style = "margin-left:5px"/> </td> 
+   </tr>
+    <tr>
+   <td>  Schedule time: <input type = "time" name  = "time" style = "margin-left:8px"/> </td> 
+   </tr>
+
+  <tr> 
+   <td>  Compose : <input type = "text" name  = "compose"  size="500px" placeholder ="Enter message to send" style = "margin-left:35px"required/> </td> 
+   </tr>
+   
+   <tr>
+   </tr>
+   <tr>
+   <td> <input type = "submit" value ="Send" style="height:30px;width:100px"/> </td>
+   <td> <input type = "reset" value ="Clear" style="height:30px;width:100px"/> </td>
+    </tr>
+  </table> 
+</form>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
